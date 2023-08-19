@@ -47,8 +47,8 @@ class _calculatorState extends State<calculator> {
           ],
         ),
       ),
-      appBar: AppBar(
-        title: Center(child: Text('calculator App')),
+      appBar: AppBar(backgroundColor: Colors.purple.shade300,
+        title: Center(child: Text('calculator App',style: TextStyle(fontSize: 27),)),
         actions: [
           PopupMenuButton(
               itemBuilder: (context) => [
@@ -88,14 +88,18 @@ class _calculatorState extends State<calculator> {
                         SizedBox(
                           width: 3,
                         ),
-                        Text('Clear screen')
+                        InkWell(onTap:
+                        (){value='';}
+
+
+                            ,child: Text('Clear screen'))
                       ],
                     ))
                   ])
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [Column(
             children: [
@@ -120,7 +124,7 @@ class _calculatorState extends State<calculator> {
                 ),])
               )
             ],
-          ),SizedBox(height: 12,),
+          ),SizedBox(height: 30,),
             Column(
               children: [
                 Row(
